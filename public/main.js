@@ -29,7 +29,7 @@ const handleButtonClick = (event) => {
     $('.scores .computer').textContent = newScoreNumber
     // console.log('You lost!')
     if (newScoreNumber >= 2) {
-      gameOver(true)
+      gameOver(false)
     }
   }
 
@@ -41,7 +41,6 @@ const getComputerMove = () => {
   return moves[Math.floor(Math.random() * moves.length)]
 }
 
-// HINT: Try calling `gameOver(true)` in the console.
 const gameOver = (playerDidWin) => {
   if (playerDidWin) {
     $('.dialog h3').textContent = 'You won!'
